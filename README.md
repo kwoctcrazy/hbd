@@ -2,7 +2,7 @@
 
 ### Wish someone special happy birthday in a special way.
 
-#### [See it Live](https://kwoctcrazy.github.io/happy-birthday-1/)
+#### [See it Live](https://kwoctcrazy.github.io/happy-birthday-bitchass/)
 
 #### Update: Also you can customize all the texts without modifying the code!
 
