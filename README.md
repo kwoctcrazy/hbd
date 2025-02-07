@@ -16,7 +16,7 @@ You can create your very own happy-birthday page in a few easy steps:
 
 **You do not need to create Pull Request to this main repository to get it running.**
 
-I've created the JSON file (`customize.json`) for easy and quick customizability. It allows you the change all of the texts and the image used on the webpage without modifying the code. However, If you want to customize it further, leave the JSON fields empty and edit the HTML file directly. This is because the content in the JSON file overwrites the HTML.
+I've created the JSON file (`customize.json`) for easy and quick customizability. If you want to customize it further, leave the JSON fields empty and edit the HTML file directly. This is because the content in the JSON file overwrites the HTML.
 
 Please note that I've created this page in a hurry and it comes with no warranty.
 
