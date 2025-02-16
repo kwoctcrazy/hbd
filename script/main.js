@@ -10,16 +10,20 @@ const fetchData = () => {
             document
               .querySelector(`[data-node-name*="${customData}"]`)
               .setAttribute("src", data[customData]);
+          } else if (customData === "musicPath") {
+            // Set the music file path dynamically
+            const audio = document.getElementById("background-music");
+            audio.src = data[customData];
           } else {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
         }
 
         // Check if the iteration is over
-        // Run amimation if so
-        if ( dataArr.length === dataArr.indexOf(customData) + 1 ) {
-          animationTimeline();
-        } 
+        // Run animation and music if so
+        if (dataArr.length === dataArr.indexOf(customData) + 1) {
+          startAnimationAndMusic();
+        }
       });
     });
 };
@@ -32,11 +36,11 @@ const animationTimeline = () => {
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span><span>")}</span>`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -292,14 +296,19 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
-
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
+    document.getElementById("background-music").play();
   });
+};
+
+// Function to start animation and music together
+const startAnimationAndMusic = () => {
+  const audio = document.getElementById("background-music");
+  audio.play();
+  animationTimeline();
 };
 
 // Run fetch and animation in sequence
